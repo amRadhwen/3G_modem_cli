@@ -4,7 +4,7 @@ import serial
 from serial import SerialException
 
 
-class Modem:
+class MODEM:
 
     def __init__(self, port, baudrate, pin=None):
         self.port = port
@@ -37,11 +37,13 @@ class Modem:
             return True
         else:
             return False
+    
+    def getModem(self):
+        return self.modem
 
 
 
 
-myModem = Modem("COM78", 460800).connect();
-print(myModem)
+
 
     
